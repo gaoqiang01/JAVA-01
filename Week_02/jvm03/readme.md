@@ -119,3 +119,9 @@
     G1GC  > CMSGC >  ParallelGC>  SerialGC
     
     
+7.对gateway-server-0.0.1-SNAPSHOT.jar 采用并行gc在不同内存下运行结果
+
+    -->>> 60并发运行60s.png
+    在1g,2g内存下 效率很高，在4g时候暂   stw拉长了，
+    所以要选择合适的内存来运行程序，内存分配过大过于浪费
+
