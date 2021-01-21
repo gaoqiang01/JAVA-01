@@ -1,4 +1,4 @@
-采用GCLogAnalysis执行操作测试用例 （默认内存16g）
+采用GCLogAnalysis执行操作测试用例
 
     -Xloggc:gc.demo.log  打印日志
     -XX:+PrintGCDetails  打印程序执行的详细
@@ -14,6 +14,9 @@
     java -Xmx4g -XX:+PrintGCDetails -XX:+UseParallelGC  GCLogAnalysis  ->>>>16891
     java -Xmx8g -XX:+PrintGCDetails -XX:+UseParallelGC  GCLogAnalysis  ->>>>17265
     
+    所有 内存分配并不是越大越好 ，也不是越小越好 ，，
+    对于Java8，一般堆内存的初始容量为物理内存大小的1/64， 最大内存不超过物理内存的1/4或1G.
+
 
 
 2.为什么会出现内存溢出
