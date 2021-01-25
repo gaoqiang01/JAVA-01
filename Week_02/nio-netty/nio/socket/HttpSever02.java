@@ -21,7 +21,7 @@ public class HttpSever02 {
 
     public static void main(String[] args) throws IOException {
 
-        ServerSocket serverSocket= new ServerSocket(8082);
+        ServerSocket serverSocket= new ServerSocket(9002);
 
         while (true){
             try {

@@ -21,7 +21,7 @@ public class HttpSever03 {
 
     public static void main(String[] args) throws IOException {
         ExecutorService executorService = Executors.newFixedThreadPool(40);
-        final ServerSocket serverSocket = new ServerSocket(8083);
+        final ServerSocket serverSocket = new ServerSocket(9003);
 
         while (true) {
             try {
@@ -42,7 +42,7 @@ public class HttpSever03 {
 
 
         try {
-            Thread.sleep(20);
+//            Thread.sleep(20);
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
             printWriter.println("http/1.1 200 ok ");
             printWriter.println("Content-typpe/html;charset=utf-8");
@@ -50,7 +50,7 @@ public class HttpSever03 {
             printWriter.println("hello,nio");
             printWriter.close();
             socket.close();
-        } catch (InterruptedException | IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
